@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.skillbridge.domain.Activity;
 import com.skillbridge.domain.LearningModule;
@@ -32,6 +33,7 @@ public class SeedDataConfiguration {
             ProjectRepository projects,
             LearningModuleRepository modules,
             ActivityRepository activities,
+            PasswordEncoder passwordEncoder,
             org.springframework.core.env.Environment environment) {
         return args -> {
             if (!Boolean.parseBoolean(environment.getProperty("skillbridge.seed-data-enabled", "true"))
@@ -39,24 +41,25 @@ public class SeedDataConfiguration {
                 return;
             }
 
+            String seededPassword = passwordEncoder.encode("1234");
             users.saveAll(List.of(
-                    new User("John Doe", "john.doe@skillbridge.local", Role.STUDENT),
-                    new User("Aarav Sharma", "aarav.sharma@skillbridge.local", Role.STUDENT),
-                    new User("Maya Khan", "maya.khan@skillbridge.local", Role.STUDENT),
-                    new User("Rohan Farooq", "rohan.farooq@skillbridge.local", Role.STUDENT),
-                    new User("Ananya Patel", "ananya.patel@skillbridge.local", Role.STUDENT),
-                    new User("Ishaan Mehta", "ishaan.mehta@skillbridge.local", Role.STUDENT),
-                    new User("Sara Thomas", "sara.thomas@skillbridge.local", Role.STUDENT),
-                    new User("Vikram Nair", "vikram.nair@skillbridge.local", Role.STUDENT),
-                    new User("Nisha Verma", "nisha.verma@skillbridge.local", Role.STUDENT),
-                    new User("Kabir Singh", "kabir.singh@skillbridge.local", Role.STUDENT),
-                    new User("Diya Iyer", "diya.iyer@skillbridge.local", Role.STUDENT),
-                    new User("Arjun Rao", "arjun.rao@skillbridge.local", Role.STUDENT),
-                    new User("Meera Joshi", "meera.joshi@skillbridge.local", Role.STUDENT),
-                    new User("Zoya Ali", "zoya.ali@skillbridge.local", Role.STUDENT),
-                    new User("Dev Malhotra", "dev.malhotra@skillbridge.local", Role.STUDENT),
-                    new User("Priya Menon", "priya.menon@skillbridge.local", Role.STUDENT),
-                    new User("SkillBridge Admin", "admin@skillbridge.local", Role.ADMIN)));
+                    new User("John Doe", "john.doe@mail.com", seededPassword, Role.STUDENT),
+                    new User("Aarav Sharma", "aarav.sharma@mail.com", seededPassword, Role.STUDENT),
+                    new User("Maya Khan", "maya.khan@mail.com", seededPassword, Role.STUDENT),
+                    new User("Rohan Farooq", "rohan.farooq@mail.com", seededPassword, Role.STUDENT),
+                    new User("Ananya Patel", "ananya.patel@mail.com", seededPassword, Role.STUDENT),
+                    new User("Ishaan Mehta", "ishaan.mehta@mail.com", seededPassword, Role.STUDENT),
+                    new User("Sara Thomas", "sara.thomas@mail.com", seededPassword, Role.STUDENT),
+                    new User("Vikram Nair", "vikram.nair@mail.com", seededPassword, Role.STUDENT),
+                    new User("Nisha Verma", "nisha.verma@mail.com", seededPassword, Role.STUDENT),
+                    new User("Kabir Singh", "kabir.singh@mail.com", seededPassword, Role.STUDENT),
+                    new User("Diya Iyer", "diya.iyer@mail.com", seededPassword, Role.STUDENT),
+                    new User("Arjun Rao", "arjun.rao@mail.com", seededPassword, Role.STUDENT),
+                    new User("Meera Joshi", "meera.joshi@mail.com", seededPassword, Role.STUDENT),
+                    new User("Zoya Ali", "zoya.ali@mail.com", seededPassword, Role.STUDENT),
+                    new User("Dev Malhotra", "dev.malhotra@mail.com", seededPassword, Role.STUDENT),
+                    new User("Priya Menon", "priya.menon@mail.com", seededPassword, Role.STUDENT),
+                    new User("SkillBridge Admin", "admin@mail.com", seededPassword, Role.ADMIN)));
 
             skills.saveAll(List.of(
                     new Skill("Java", "Backend"), new Skill("Spring Boot", "Backend"),

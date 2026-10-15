@@ -27,6 +27,13 @@ When `SEED_DATA_ENABLED=true` and the database is empty, startup creates:
 This provides the records needed by the dashboard while keeping seed data
 repeatable: it runs only when the users table is empty.
 
+All development seed accounts use password `1234`. For example:
+
+```text
+Email: john.doe@mail.com
+Password: 1234
+```
+
 To run the application directly with Maven, export the variables from
 `backend/.env` in your shell and ensure MySQL is running:
 

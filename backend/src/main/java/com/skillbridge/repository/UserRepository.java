@@ -9,5 +9,6 @@ import com.skillbridge.domain.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     long countByRole(Role role);
+    java.util.Optional<User> findByEmailIgnoreCase(String email);
     List<User> findTop5ByOrderByCreatedAtDesc();
 }

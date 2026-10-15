@@ -1,0 +1,18 @@
+name,email,password,role
+John Doe,john.doe@mail.com,1234,STUDENT
+Aarav Sharma,aarav.sharma@mail.com,1234,STUDENT
+Maya Khan,maya.khan@mail.com,1234,STUDENT
+Rohan Farooq,rohan.farooq@mail.com,1234,STUDENT
+Ananya Patel,ananya.patel@mail.com,1234,STUDENT
+Ishaan Mehta,ishaan.mehta@mail.com,1234,STUDENT
+Sara Thomas,sara.thomas@mail.com,1234,STUDENT
+Vikram Nair,vikram.nair@mail.com,1234,STUDENT
+Nisha Verma,nisha.verma@mail.com,1234,STUDENT
+Kabir Singh,kabir.singh@mail.com,1234,STUDENT
+Diya Iyer,diya.iyer@mail.com,1234,STUDENT
+Arjun Rao,arjun.rao@mail.com,1234,STUDENT
+Meera Joshi,meera.joshi@mail.com,1234,STUDENT
+Zoya Ali,zoya.ali@mail.com,1234,STUDENT
+Dev Malhotra,dev.malhotra@mail.com,1234,STUDENT
+Priya Menon,priya.menon@mail.com,1234,STUDENT
+SkillBridge Admin,admin@mail.com,1234,ADMIN

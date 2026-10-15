@@ -1,0 +1,21 @@
+type,title,detail,accent
+PROJECT,New project assigned,Smart Agriculture Monitoring,blue
+MODULE,Module completed,Spring Boot Essentials,purple
+PLACEMENT,Placement drive,TCS Java Developer,orange
+MENTOR,New message from mentor,Your Spring Boot roadmap was updated,green
+SKILL,Skill added,REST APIs added to your profile,blue
+PROJECT,Team invitation,Campus Event Hub invited you to join,purple
+GOAL,Learning goal created,Build a production-ready API,orange
+MODULE,Module started,Database Design,green
+PROJECT,Project milestone,E-Commerce Platform completed sprint one,blue
+MENTOR,Mentor feedback,Review your authentication flow,purple
+SKILL,Skill updated,Java proficiency updated to advanced,green
+MODULE,Module completed,Git Collaboration,orange
+PROJECT,New project opened,Accessible Campus Map is recruiting,blue
+GOAL,Goal milestone,REST API goal reached 75 percent,purple
+PLACEMENT,Opportunity saved,Backend Developer Infosys,green
+MODULE,Module started,Building RAG Applications,orange
+PROJECT,Project update,Peer Tutor Network scope approved,blue
+MENTOR,Conversation started,Discussed Spring Security,purple
+SKILL,Skill mapped,Docker mapped to DevOps,green
+MODULE,Module completed,Java Fundamentals,orange
